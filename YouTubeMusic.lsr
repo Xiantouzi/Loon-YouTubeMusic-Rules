@@ -1,0 +1,16 @@
+# NAME: YouTubeMusic
+# DESC: YouTube Music 分流规则（纯规则列表，每行一条 Loon 规则语法）
+# SOURCE: blackmatrix7/ios_rule_script YouTubeMusic.list 为基础，补充播放/API/资源域名
+# 订阅方式（主配置 [Rule] 中添加）：https://raw.githubusercontent.com/Xiantouzi/Loon-YouTubeMusic-Rules/main/YouTubeMusic.lsr,PROXY
+# ---- 主站与接口 ----
+DOMAIN,music.youtube.com,PROXY
+# ---- 音视频流媒体服务器（播放必需，YouTube 全系共用）----
+DOMAIN-SUFFIX,googlevideo.com,PROXY
+# ---- YouTube 系列 API ----
+DOMAIN-SUFFIX,youtubei.googleapis.com,PROXY
+# ---- 资源/封面图 ----
+DOMAIN-SUFFIX,ytimg.com,PROXY
+# ---- App 端 UA 匹配 ----
+USER-AGENT,YouTubeMusic*,PROXY
+USER-AGENT,*YouTubeMusic*,PROXY
+USER-AGENT,com.google.ios.youtubemusic*,PROXY
